@@ -1,0 +1,105 @@
+ion-content, ion-header{
+
+    ion-avatar{
+        height: 45px;
+        width:45px;
+    }
+    .text-bold{
+        font-family: inherit;
+        font-weight: 550;
+        padding-left:.4em;
+    }
+    .text-muted{
+        font-weight: normal;
+        font-style: unset;
+        font-family: unset;
+        color:gray;
+    }
+    .messages{
+        position: relative;
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        .message{
+            position: relative;
+            border-radius: 4px;
+            max-width: 70%;
+            margin: 8px 0;
+            padding:10px 15px;
+            span.text-muted {
+                color: darkgrey;
+                font-family: inherit;
+                font-size: 13px;
+                &:before{
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+        .message.incoming{
+            align-self: flex-start;
+            background: var(--ion-color-tertiary);
+            color : var(--ion-color-light);
+            &:before{
+                content: "";
+                position: absolute;
+                left: -15px;
+                top: 5px;
+                border-radius: 10px;
+                border: 18px solid transparent;
+                border-top-color: var(--ion-color-tertiary);
+            }
+        }
+        .message.outgoing{
+            align-self: flex-end;
+            background: var(--ion-color-light);
+            &:after{
+                content: "";
+                position: absolute;
+                right: -15px;
+                top: 5px;
+                border-radius: 10px;
+                border: 18px solid transparent;
+                border-top-color: var(--ion-color-light);
+            }
+        }
+    }
+    
+    
+}
+ion-footer{
+    ion-toolbar{
+        --padding-bottom : 0px !important;
+        .compose-area{
+            position: relative;
+            margin:0 !important;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            &:first-child{
+               flex-grow: 1;
+            }
+            #iconBtns{
+                width: 25%;
+                ion-button{
+                    width: 50px;
+                    position: absolute;
+                    top: -2.5px;
+                    right: 0;
+                    ion-icon{
+                        font-size: 1.8em !important;
+                    }
+                }
+                ion-icon[name="mic"]{
+                    font-size: 1.8em;
+                    position: absolute;
+                    top: 6px;
+                    right: 56px;
+                    color: white;
+                }
+            }
+        }
+        
+    }
+}

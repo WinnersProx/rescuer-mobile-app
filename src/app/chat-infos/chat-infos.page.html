@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="light" defaultHref="tabs" (click)="dismiss()"></ion-back-button>
+        <ion-avatar>
+          <img src="../../assets/{{ getCurrentFriend.avatar }}"/>
+        </ion-avatar>
+        <ion-label class="text-bold" color="light">{{ getCurrentFriend.name }}</ion-label>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding #mainContent id="mainContent">
+  <div class="messages" #chatsContainer>
+    <div *ngFor="let chat of chats" lines="none" class="message {{ getCurrentFriend.id === chat.m_sender ? 'incoming' : 'outgoing' }}">
+        {{ chat.m_content }}
+        <span class="text-muted">{{ chat.created | date }} at {{ chat.created | date : 'shortTime' }}</span>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+      <form class="compose-area" (submit)="sendMessage(this)">
+          <ion-input type="text" [(ngModel)]="uchat" name="msgArea" placeholder="Type your message here..." color="light" ></ion-input>
+          <div id="iconBtns">
+              <ion-icon name="mic" color="light"></ion-icon>
+              <ion-button type="submit" color="tertiary" slot="icon-only"  name="subbutton">
+                  <ion-icon name="send"></ion-icon>
+              </ion-button> 
+          </div>
+      </form>
+      
+    </ion-toolbar>
+</ion-footer>

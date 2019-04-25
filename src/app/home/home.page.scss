@@ -1,0 +1,25 @@
+.landpage{
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    ion-button.main-call{
+      font-weight: bold;
+      font-family: "Eina","system-ui", sans-serif;
+      text-transform: capitalize;
+    }
+    .welcome-statement, ion-text.smooth{
+        margin-top: 25vh !important;
+    }
+    h1{
+      margin-top:10vh;
+    }
+    .welcome-statement, h1{
+      color: var(--ion-color-light);
+      font-weight: bold;
+      font-family: "Eina","system-ui", sans-serif;
+    }
+    ion-text.smooth{
+        font-family: monospace !important;
+        font-style : italic !important;
+    }
+  }

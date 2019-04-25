@@ -1,0 +1,39 @@
+<ion-app>
+  <ion-split-pane contentId="side">
+      <ion-menu side="start" contentId="side" class="sideMenu" swipeGesture="true" type="overlay" *ngIf="this.auth">
+        <ion-content>
+            <div class="profile-box">
+              <img src="../../assets/{{ this.auth.avatar }}">
+              <span class="text-muted">
+                <ion-text color="light">{{ this.auth.email }}</ion-text>
+              </span>
+            </div>
+            <ion-list>
+              <ion-item>
+                <ion-icon name="home" color="light"></ion-icon> 
+                <ion-text color="light">Home</ion-text>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="home" color="light"></ion-icon>
+                  <ion-text color="light">Posts</ion-text>
+                  <ion-badge slot="end" color="secondary" mode="ios">10</ion-badge>
+              </ion-item>
+              <ion-item>
+                  <ion-icon name="chatbubbles" color="light"></ion-icon> 
+                  <ion-text color="light">Chats</ion-text>
+                  <ion-badge slot="end" color="success" mode="ios">100</ion-badge>
+                </ion-item>
+              <ion-item>
+                <ion-icon name="cog" color="light"></ion-icon>
+                <ion-text color="light">Settings</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="eye-off" color="light"></ion-icon>
+                <ion-text color="light">Logout</ion-text>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="side"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

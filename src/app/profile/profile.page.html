@@ -1,0 +1,31 @@
+<ion-content>
+      <div class="user-avatar">
+        <ion-back-button color="light" defaultHref="tabs" (click)="dismiss()"></ion-back-button>
+        <img src="../../assets/{{getUser.avatar}}" class="avatar-img">
+        <span class="info">
+          Joined us on {{ getUser.created | date }}
+        </span>
+      </div>
+      <ion-list class="user-infos">
+        <ion-item lines="none">
+          <ion-label color="tertiary">Name</ion-label>
+          <ion-text color="light" class="smart" [style.textTransform]="'capitalize'">{{ getUser.name }}</ion-text>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label color="tertiary">Email</ion-label>
+            <ion-text color="light" class="smart">{{ getUser.email }}</ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-label color="tertiary">Phone</ion-label>
+            <ion-text color="light" class="smart">{{ getUser.phone }}</ion-text>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label color="tertiary">About</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-text class="smart" text-wrap>
+            &nbsp;&nbsp;{{ getUser.about }}
+          </ion-text>
+        </ion-item>
+      </ion-list>
+</ion-content>

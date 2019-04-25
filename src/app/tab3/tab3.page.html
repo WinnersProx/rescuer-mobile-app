@@ -1,0 +1,29 @@
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-icon name="cog" color="light"></ion-icon>
+            <ion-text color="light">
+                &nbsp;General Settings 
+            </ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="help-circle" color="light" [style.fontSize]="'25px'"></ion-icon>
+            <ion-text color="light">
+                &nbsp;New Feedback
+            </ion-text>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="information-circle" color="light" [style.fontSize]="'25px'"></ion-icon>
+            <ion-text color="light">
+                &nbsp;About Us 
+            </ion-text>
+        </ion-item>
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+        <ion-button expand="block" color="danger" (click)="logoutUser()">
+            <ion-icon name="eye-off"></ion-icon> Logout
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>

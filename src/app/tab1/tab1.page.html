@@ -1,0 +1,18 @@
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let chat of chats" class="chats">
+            <ion-avatar slot="start" (click)="userProfile(chat.user)">
+                <img src="../../assets/{{chat.user.avatar}}">
+            </ion-avatar>
+            <ion-label (click)="chatInfos(chat.user)" class="chat">
+                <ion-label class="text-bold" color="light" [style.textTransform]="'capitalize'">{{chat.user.name}}</ion-label>
+                <div class="chat-nbr" *ngIf="chat.message"> 1 </div>
+                <p class="text-muted">
+                    <span class="m_content">{{chat.message != null ? chat.message.m_content : 'Actualy No chat!'}}</span>
+                    <i class="text-muted" *ngIf="chat.message">{{ chat.message.created | date }} at {{ chat.message.created | date:'shortTime' }}</i>
+                </p>
+                
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

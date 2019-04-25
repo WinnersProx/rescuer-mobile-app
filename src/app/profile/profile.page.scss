@@ -1,0 +1,43 @@
+$ion-smart-color : #c1bada;
+ion-header{
+    ion-label{
+        font-weight: bolder;
+    }
+}
+ion-content{
+    position: relative;
+    .smart{
+        color: $ion-smart-color;
+    }
+    .user-avatar{
+        background : linear-gradient(to bottom, #2e2940, #3a3b3f);
+        position: relative;
+        text-align: center;
+        width:100%;
+        min-height: 160px;
+        padding: 3.6em 0;
+        margin:0;
+        ion-back-button{
+            position: absolute;
+            top:1em;
+            left: 1.2em;
+        }
+        .avatar-img{
+            width: 120px;
+            height: 120px;
+            padding:3px;
+            border:2px dashed #673ab7;
+            border-right-style: solid;
+            border-left-style: solid;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        span.info{
+            position:absolute; 
+            bottom: .8em; 
+            right: 1.3em;
+            color: gray;
+            font-size: 13px;
+        }
+    }
+}

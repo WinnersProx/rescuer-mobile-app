@@ -1,0 +1,17 @@
+ion-content{
+    text-align: center;
+    .login-title{
+        color: var(--ion-color-light);
+        text-align: center;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+        font-weight: bold;
+        font-family: "Eina","system-ui", sans-serif;
+        text-transform: capitalize;
+        .smartchat-logo{
+            content: url("../../assets/smartchat_mobile.png");
+            height: 50px;
+            width: 50px;
+        }
+    }
+}

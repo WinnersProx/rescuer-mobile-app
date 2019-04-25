@@ -1,0 +1,9 @@
+{
+  "name": "SmartChat",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "3874b382",
+  "proxy": "http://localhost/smartchat_api/"
+}

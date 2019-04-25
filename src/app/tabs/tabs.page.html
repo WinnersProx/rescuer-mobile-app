@@ -1,0 +1,28 @@
+<!-- <super-tabs tabsPlacement="top" toolbarColor="light" indicatorColor="light" (tabSelect)="onTabSelected($event)">
+    <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id">
+    </super-tab>
+</super-tabs> -->
+  
+<ion-tabs>
+  <ion-tab-bar slot="top">
+    <ion-tab-button tab="tab1" color="light">
+      <ion-icon name="chatbubbles"></ion-icon>
+      <ion-label>Chats</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab2" color="light">
+      <ion-icon name="contacts"></ion-icon>
+      <ion-label>Friends</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" color="light">
+      <ion-item>
+        <ion-avatar slot="end">
+          <img src="../../assets/{{this.AuthUser.avatar}}">
+        </ion-avatar>
+      </ion-item>
+      
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

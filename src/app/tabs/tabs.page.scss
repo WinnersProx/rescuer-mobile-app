@@ -1,0 +1,14 @@
+ion-header{
+    font-weight: bold;
+    ion-toolbar{
+        padding: 0 .5em;
+        font-family: inherit;
+    }
+}
+ion-menu{
+    --min-width:80vh;
+    --max-width:80vh;
+}
+.sideMenu{
+    width:80vh;
+}

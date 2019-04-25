@@ -1,0 +1,15 @@
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let friend of getFriends">
+            <ion-avatar slot="start" (click)="userProfile(friend.user)">
+                <img src="http://localhost/smartchat_api/img/{{friend.user.avatar}}">
+            </ion-avatar>
+            <ion-label>
+                <ion-label class="text-bold" color="light" [style.textTransform]="'capitalize'">{{friend.user.name}}</ion-label>
+                <p class="text-muted">
+                    <span class="m_content">{{friend.user.email}}</span>
+                </p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>
