@@ -18,7 +18,6 @@ export class ChatInfosPage implements OnInit {
     console.log(this.getCurrentFriend);
     //this.friendId = parseInt(this.Aroute.snapshot.paramMap.get('userId'));//route params
     this.chats = Object.values(this.Chats.getFriendChats(this.getCurrentFriend.id))[0];
-    // get chat details
   }
   ionViewDidEnter(){
     // document.querySelector('#mainContent').scrollToBottom(200);

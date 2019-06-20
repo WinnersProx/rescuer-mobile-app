@@ -1,0 +1,40 @@
+ion-content{
+    padding: .5em;
+    --color: #ffffff;
+    &.new-alert-sheet{
+        --background: #3c434d; // #40506d
+    }
+    div{
+        color: --light;
+        &.main-title{
+            margin-top: 1em;
+            font-family: inherit;
+            font-size: 1em;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        &.call-to-actions{
+            position: absolute;
+            bottom: 1em;
+            width: 100%;
+            text-align: center;
+            ion-button{
+                width: 45%;
+            }
+        }
+    }
+    ion-grid{
+        &.options{
+            padding: 1.2em;
+            ion-icon{
+                &.rounded-icon{
+                    padding: 7px;
+                    border: 2px solid rgb(218, 220, 224);
+                    color: --light;
+                    font-size: 3em;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

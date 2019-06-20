@@ -1,14 +1,15 @@
-ion-header{
-    font-weight: bold;
-    ion-toolbar{
-        padding: 0 .5em;
-        font-family: inherit;
+ion-tabs{
+    ion-tab-button{
+        ion-icon{
+            &.toggle-icon{
+                color:red;
+                background:#ffff;
+                border: 2px solid red;
+                padding: 10px;
+                border-radius: 50%;
+            }
+        }
     }
 }
-ion-menu{
-    --min-width:80vh;
-    --max-width:80vh;
-}
-.sideMenu{
-    width:80vh;
-}
+
+

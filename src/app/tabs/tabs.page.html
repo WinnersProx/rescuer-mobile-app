@@ -1,27 +1,27 @@
-<!-- <super-tabs tabsPlacement="top" toolbarColor="light" indicatorColor="light" (tabSelect)="onTabSelected($event)">
-    <super-tab *ngFor="let page of pages" [root]="page.pageName" [icon]="page.icon" [id]="page.id">
-    </super-tab>
-</super-tabs> -->
-  
 <ion-tabs>
-  <ion-tab-bar slot="top">
-    <ion-tab-button tab="tab1" color="light">
-      <ion-icon name="chatbubbles"></ion-icon>
-      <ion-label>Chats</ion-label>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="guides" color="light">
+      <ion-icon name="bookmarks"></ion-icon>
+      <ion-label>Guide</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab2" color="light">
-      <ion-icon name="contacts"></ion-icon>
-      <ion-label>Friends</ion-label>
+    <ion-tab-button tab="alerts" color="light">
+      <ion-icon name="ios-megaphone"></ion-icon>
+      <ion-label>Alerts</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button  class="toggle-alert" (click) = "newEmergencyAlert()">
+      <ion-icon name="ios-rocket" color="danger" size="large" sr="icon-only" class="toggle-icon"></ion-icon>
     </ion-tab-button>
 
     <ion-tab-button tab="tab3" color="light">
-      <ion-item>
-        <ion-avatar slot="end">
-          <img src="../../assets/{{this.AuthUser.avatar}}">
-        </ion-avatar>
-      </ion-item>
-      
+      <ion-icon name="text"></ion-icon> 
+      <ion-label>ChatBox</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tab3" color="light">
+      <ion-icon name="ios-keypad"></ion-icon> 
+      <ion-label>More</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 

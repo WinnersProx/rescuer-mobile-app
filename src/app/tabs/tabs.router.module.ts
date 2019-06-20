@@ -7,20 +7,20 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'guides',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: '../guides/guides.module#GuidesPageModule'
           }
         ]
       },
       {
-        path: 'tab2',
+        path: 'alerts',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
+            loadChildren: '../alerts/alerts.module#AlertsPageModule'
           }
         ]
       },
@@ -35,14 +35,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/guides',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/guides',
     pathMatch: 'full'
   }
 ];

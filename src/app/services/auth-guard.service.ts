@@ -11,7 +11,6 @@ export class AuthGuardService implements CanActivate {
   }
   canActivate(next : ActivatedRouteSnapshot, 
     state : RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    console.log(this.Auth.getToken);
     let allow:boolean = !!this.Auth.getToken ? true : false;
     if(allow){
       return allow

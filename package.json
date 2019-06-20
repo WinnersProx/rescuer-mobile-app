@@ -1,5 +1,5 @@
 {
-  "name": "SChat",
+  "name": "Emergencies App",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -66,5 +66,5 @@
   "devDependencies": {
     
   },
-  "description": "A Smartchat demo project"
+  "description": "A project For emergencies management connected to the whole African Region"
 }

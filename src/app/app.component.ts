@@ -1,18 +1,20 @@
 import { Component, NgZone } from '@angular/core';
-
 import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthenticationService } from './services/authentication.service';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
+import { DataService } from './services/datas.service'
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls : ['app.component.scss']
 })
 export class AppComponent {
+
   private auth;
+  private pageTitle : string = '...';
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -21,8 +23,10 @@ export class AppComponent {
     private route: Router,
     private store : Storage,
     private menu : MenuController,
-    private zone : NgZone
+    private zone : NgZone,
+    private ___data : DataService
   ) {
+  
     this.initializeApp();
     this.auth = {
       "id": 2,
@@ -37,6 +41,9 @@ export class AppComponent {
       "user_dob": null,
       "user_sex": ""
     }
+    this.___data.currentTitle.subscribe(title => {
+      this.pageTitle = title
+    })
   }
 
   initializeApp() {

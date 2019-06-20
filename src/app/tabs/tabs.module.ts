@@ -4,9 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs.router.module';
 import { TabsPage } from './tabs.page';
-// import { SuperTabsModule } from 'ionic2-super-tabs';
-// import { Routes, RouterModule } from '@angular/router';
-
+import { NewAlertPage } from '../new-alert/new-alert.page'
 
 @NgModule({
   imports: [
@@ -14,8 +12,8 @@ import { TabsPage } from './tabs.page';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule
-    // SuperTabsModule.forRoot()
   ],
-  declarations: [TabsPage]
+  declarations: [TabsPage, NewAlertPage],
+  entryComponents : [NewAlertPage]
 })
 export class TabsPageModule {}

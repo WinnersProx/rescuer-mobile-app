@@ -10,7 +10,7 @@ export class UsersService {
   }
   getUserFriends(){
     let friends = {
-      "friends": [
+      "friends": [ 
           {
               "id": 1,
               "sender_id": 3,

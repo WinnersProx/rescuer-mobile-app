@@ -3,7 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab1Page } from './tab1.page';
+import { GuidesPage } from './guides.page';
 import { ChatInfosPage } from '../chat-infos/chat-infos.page';
 import { ProfilePage } from '../profile/profile.page';
 @NgModule({
@@ -11,10 +11,10 @@ import { ProfilePage } from '../profile/profile.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab1Page }])
+    RouterModule.forChild([{ path: '', component: GuidesPage }])
   ],
-  declarations: [Tab1Page, ChatInfosPage,ProfilePage],
+  declarations: [GuidesPage, ChatInfosPage,ProfilePage],
   entryComponents : [ChatInfosPage,ProfilePage]
 
 })
-export class Tab1PageModule {}
+export class GuidesPageModule {}

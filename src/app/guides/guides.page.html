@@ -1,0 +1,28 @@
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let chat of chats; index as i" class="chats" lines="full">
+            <ion-avatar slot="start" (click)="userProfile(chat.user)">
+                <ion-icon name="{{i % 2 === 0 ? 'ios-rocket' : (i % 3 === 0) ? 'ios-flag' : 'ios-flame'}}" class="{{i % 2 === 0 ? 'low' : (i % 3 === 0) ? 'medium' : 'high'}}" size="xx-large">
+                </ion-icon>
+            </ion-avatar>
+            <ion-label (click)="chatInfos(chat.user)" class="chat">
+                <ion-label class="guide-title">{{
+                    (i % 2) === 0 
+                    ? 'Guide for Simpler cases' : 
+                    (i % 3 === 0) ? 'Guide for medium cases' : 'Guide for fires and flames'
+                }}</ion-label>
+                <p class="text-muted">
+                    <span class="m_content">{{
+                            i % 2 === 0 ? 'Here are 3 steps to handle simple cases of emmergencies'
+                            : (i % 3 === 0) 
+                                ? 'These are 5 steps to handle medium cases of emmergencies' 
+                                : 'Following are 3 steps to handle dangerous or higher cases of emmergencies'
+                    }}</span>
+                    <!--<i class="text-muted" *ngIf="chat.message">{{ chat.message.created | date }} at {{ chat.message.created | date:'shortTime' }}</i>-->
+                </p>
+                
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    
+</ion-content>

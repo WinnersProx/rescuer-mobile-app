@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab1PageModule } from '../tab1/tab1.module';
+import { GuidesPageModule } from '../guides/guides.module';
 
 //
 
@@ -14,7 +14,7 @@ import { Tab1PageModule } from '../tab1/tab1.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab1PageModule
+    GuidesPageModule
     //RouterModule.forChild(routes)
   ],
   //declarations: [ChatInfosPage]

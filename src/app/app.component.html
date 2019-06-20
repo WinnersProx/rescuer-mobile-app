@@ -3,37 +3,46 @@
       <ion-menu side="start" contentId="side" class="sideMenu" swipeGesture="true" type="overlay" *ngIf="this.auth">
         <ion-content>
             <div class="profile-box">
-              <img src="../../assets/{{ this.auth.avatar }}">
-              <span class="text-muted">
+              <!--<img src="../../assets/{{ this.auth.avatar }}">-->
+              <!--<span class="text-muted">
                 <ion-text color="light">{{ this.auth.email }}</ion-text>
-              </span>
+              </span>-->
             </div>
             <ion-list>
               <ion-item>
-                <ion-icon name="home" color="light"></ion-icon> 
-                <ion-text color="light">Home</ion-text>
+                <ion-icon name="home" color="dark"></ion-icon> 
+                <ion-text color="dark">Home</ion-text>
               </ion-item>
               <ion-item>
-                  <ion-icon name="home" color="light"></ion-icon>
-                  <ion-text color="light">Posts</ion-text>
-                  <ion-badge slot="end" color="secondary" mode="ios">10</ion-badge>
-              </ion-item>
-              <ion-item>
-                  <ion-icon name="chatbubbles" color="light"></ion-icon> 
-                  <ion-text color="light">Chats</ion-text>
+                  <ion-icon name="chatbubbles" color="dark"></ion-icon> 
+                  <ion-text color="dark">ChatBox</ion-text>
                   <ion-badge slot="end" color="success" mode="ios">100</ion-badge>
-                </ion-item>
-              <ion-item>
-                <ion-icon name="cog" color="light"></ion-icon>
-                <ion-text color="light">Settings</ion-text>
               </ion-item>
               <ion-item>
-                <ion-icon name="eye-off" color="light"></ion-icon>
-                <ion-text color="light">Logout</ion-text>
+                  <ion-icon name="locate" color="dark"></ion-icon> 
+                  <ion-text color="dark">Alert Tracker</ion-text>
+                  <ion-badge slot="end" color="primary" mode="ios">10</ion-badge>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="cog" color="dark"></ion-icon> 
+                <ion-text color="dark">Settings</ion-text>
+              </ion-item>
+              <ion-item>
+                <ion-icon name="eye-off" color="dark"></ion-icon> 
+                <ion-text color="dark">Logout</ion-text>
               </ion-item>
             </ion-list>
-          </ion-content>
-        </ion-menu>
-        <ion-router-outlet id="side"></ion-router-outlet>
+        </ion-content>
+      </ion-menu>
+      <ion-content id="side">
+          <ion-header mode="ios">
+              <ion-toolbar>
+                  <ion-menu-button menu="start" auto-hide="false" color="light"></ion-menu-button>
+                  <ion-title>{{ pageTitle }}</ion-title>
+              </ion-toolbar>
+            </ion-header>
+          <ion-router-outlet class="contents"></ion-router-outlet>
+      </ion-content>
+      
   </ion-split-pane>
 </ion-app>

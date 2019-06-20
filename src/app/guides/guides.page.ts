@@ -1,36 +1,39 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, DoCheck } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { ChatsService } from '../services/chats.service';
 import { ModalController } from '@ionic/angular';
-// import { map } from 'rxjs/operators';
 import { ChatInfosPage } from '../chat-infos/chat-infos.page';
 import { ProfilePage } from '../profile/profile.page';
+import { DataService } from '../services/datas.service'
 interface Chats {
 
 }
 @Component({
   selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  templateUrl: 'guides.page.html',
+  styleUrls: ['../app.component.scss','guides.page.scss']
 })
     
-export class Tab1Page implements OnInit{
+export class GuidesPage implements OnInit{
   private chats:any = [];
+  private pageTitle:string = 'Guides';
   constructor(
     private http : HttpClient, 
     private route : Router,
     private toast : ToastController,
     private modal : ModalController,
+    private ___data  : DataService,
     private Chats : ChatsService){
-    // runs the request when starting up the application
+    
   }
   ngOnInit(){
-    // When the page is initiated
     this.chats = Object.values(this.Chats.getAllChats())[0];
   }
-  
+  ngDoCheck(){
+    this.___data.updateTitle(this.pageTitle)
+  }
   async chatInfos(info){
     // create a modal for data sharing instead of routing to another page
     await this.modal.create({

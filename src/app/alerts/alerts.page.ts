@@ -1,18 +1,26 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, DoCheck } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { ToastController } from '@ionic/angular';
+import { DataService } from '../services/datas.service'
 @Component({
   selector: 'app-tab2',
-  templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  templateUrl: 'alerts.page.html',
+  styleUrls: ['../app.component.scss','alerts.page.scss']
 })
-export class Tab2Page implements OnInit{
+export class AlertsPage implements OnInit{
   private friends:any[];
-  constructor(private Users : UsersService, private toast : ToastController){
-
+  private pageTitle:string = 'Alerts'
+  constructor(
+    private Users : UsersService, 
+    private toast : ToastController,
+    private ___data  : DataService){
   }
   ngOnInit(){
+    
     this.friends = Object.values(this.Users.getUserFriends())[0];
+  }
+  ngDoCheck(){
+    this.___data.updateTitle(this.pageTitle)
   }
   get getFriends(){
     return this.friends;
