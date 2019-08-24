@@ -1,0 +1,34 @@
+<ion-content padding>
+  <form (submit)="signUp(this)">
+    <ion-item>
+      <ion-label position="floating" color="medium">Firstname</ion-label>
+      <ion-input type="text" color="light" [(ngModel)]="firstname" name="firstname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="medium">Lastname</ion-label>
+      <ion-input type="text" color="light" [(ngModel)]="lastname" name="lastname"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="medium">Email</ion-label>
+      <ion-input type="email" color="light" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="medium">Address</ion-label>
+      <ion-input type="text" color="light" [(ngModel)]="address" name="address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="medium">Phone</ion-label>
+      <ion-input type="text" color="light" [(ngModel)]="phone" name="phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="medium">Password</ion-label>
+      <ion-input type="password" color="light" [(ngModel)]="password" name="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" color="medium">Confirm Password</ion-label>
+      <ion-input type="password" color="light" [(ngModel)]="password_confirm" name="password_confirm"></ion-input>
+    </ion-item>
+    <ion-button type="submit" name="tertiary" icon="star" expand="block">Signup</ion-button>
+    <div class="ch-actions"> I already have an account <a routerLink="/login">Login</a></div>
+  </form>
+</ion-content>

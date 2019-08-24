@@ -1,0 +1,25 @@
+ion-content{
+	&.guide-steps{
+		text-align: justify;
+		div.guide-step{
+			position: relative;
+			.step-title{
+				font-weight: bold;
+				padding: .4em 0;
+			}
+			.step-image{
+				width: 100%;
+				min-height: 220px;
+				margin: .4em 0;
+				img{
+					width: 100%;
+					min-height: 220px;
+				}
+			}
+			.step-description{
+				margin: .4em 0;
+			}
+		}
+	}
+	
+}

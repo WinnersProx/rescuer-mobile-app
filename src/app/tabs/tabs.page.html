@@ -1,5 +1,5 @@
 <ion-tabs>
-  <ion-tab-bar slot="bottom">
+  <ion-tab-bar slot="bottom" #customTabBar id="customTabBar">
     <ion-tab-button tab="guides" color="light">
       <ion-icon name="bookmarks"></ion-icon>
       <ion-label>Guide</ion-label>
@@ -14,14 +14,14 @@
       <ion-icon name="ios-rocket" color="danger" size="large" sr="icon-only" class="toggle-icon"></ion-icon>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3" color="light">
+    <ion-tab-button tab="feedbacks" color="light">
       <ion-icon name="text"></ion-icon> 
-      <ion-label>ChatBox</ion-label>
+      <ion-label>Feedbacks</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3" color="light">
-      <ion-icon name="ios-keypad"></ion-icon> 
-      <ion-label>More</ion-label>
+    <ion-tab-button tab="view-profile" color="light">
+      <ion-icon name="person"></ion-icon> 
+      <ion-label>User</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 

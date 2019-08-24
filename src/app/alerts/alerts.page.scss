@@ -40,6 +40,12 @@
            display: none;
        }
       }
+      ion-label{
+        ion-button{
+          float: right;
+          --padding-start:0;
+        }
+      }
     }
   }
   ion-fabs{

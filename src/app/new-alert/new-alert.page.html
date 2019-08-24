@@ -4,24 +4,28 @@
   </div>
   <ion-grid class="options">
     <ion-row>
-      <ion-col align-self-start>
+      <ion-col align-self-start (click)="setEmergencyType('1')">
         <ion-icon name="car" class="rounded-icon"></ion-icon>
       </ion-col>
-      <ion-col align-self-center><ion-icon name="flame" class="rounded-icon"></ion-icon></ion-col>
-      <ion-col alin-self-end><ion-icon name="medkit" class="rounded-icon"></ion-icon></ion-col>
+      <ion-col align-self-center (click)="setEmergencyType('2')">
+        <ion-icon name="flame" class="rounded-icon"></ion-icon>
+      </ion-col>
+      <ion-col alin-self-end (click)="setEmergencyType('3')">
+        <ion-icon name="medkit" class="rounded-icon"></ion-icon>
+      </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col align-self-start><ion-icon name="people" class="rounded-icon"></ion-icon></ion-col>
-      <ion-col align-self-center><ion-icon name="flame" class="rounded-icon"></ion-icon></ion-col>
-      <ion-col align-self-end><ion-icon name="menu" class="rounded-icon"></ion-icon></ion-col>
+      <ion-col align-self-end (click)="setEmergencyType('4')">
+        <ion-icon name="menu" class="rounded-icon"></ion-icon>
+      </ion-col>
     </ion-row>
   </ion-grid>
   <div class="call-to-actions">
-      <ion-button color="primary">
+      <ion-button color="primary" (click)="cancelEmergency()">
           <ion-icon name="close-circle-outline"></ion-icon> Cancel
       </ion-button>
-      <ion-button color="danger">
-        <ion-icon name="warning"></ion-icon> Confirm
+      <ion-button color="secondary" (click)="newEmergency()" class="customized-btn">
+        <ion-icon name="checkmark"></ion-icon> Confirm
       </ion-button>
   </div>
   

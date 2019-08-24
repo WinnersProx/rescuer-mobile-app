@@ -13,10 +13,11 @@
 
 ## Tools for Development
 
-Tools used for development of this Application are;
+Tools used for development of this Application are:
 - Framework: [Angular](http://angular.io/), [Ionic](https://ionicframework.com)
 - Code Editor/IDE: [VSCode](https://code.visualstudio.com)
 - Programming language: [JavaScript(ES6)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/) ,[Typescript](https://www.typescriptlang.org/)
+- DBMS : [PostgreSQL](https://www.postgresql.org/)
 
 ## Getting Started With Local Tests
 

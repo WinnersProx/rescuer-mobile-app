@@ -1,0 +1,17 @@
+ion-content{
+	form{
+		padding-top: 2.5rem;
+		ion-item{
+			ion-input{
+				color:#000000 !important;
+			}
+		}
+		div.ch-actions{
+			text-align: right;
+			padding-top: .4em;
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+}
