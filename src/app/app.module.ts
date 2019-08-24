@@ -14,6 +14,7 @@ import { AuthInterceptor } from './authinterceptor.service';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthGuardService } from './services/auth-guard.service';
 // import { SuperTabsModule } from 'ionic2-super-tabs';
+import { TabsService } from './services/tabs.service';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -29,6 +30,7 @@ import { AuthGuardService } from './services/auth-guard.service';
     SplashScreen,
     AuthenticationService,
     AuthGuardService,
+    TabsService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
     {
       provide  : HTTP_INTERCEPTORS,

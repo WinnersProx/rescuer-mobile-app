@@ -16,6 +16,42 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'edit-profile',
+        children: [
+          {
+            path: '',
+            loadChildren: '../edit-profile/edit-profile.module#EditProfilePageModule'
+          }
+        ]
+      },
+      {
+        path: 'view-profile',
+        children: [
+          {
+            path: '',
+            loadChildren: '../view-profile/view-profile.module#ViewProfilePageModule'
+          }
+        ]
+      },
+      {
+        path: 'notifications',
+        children: [
+          {
+            path: '',
+            loadChildren: '../notifications/notifications.module#NotificationsPageModule'
+          }
+        ]
+      },
+      {
+        path: 'feedbacks',
+        children: [
+          {
+            path: '',
+            loadChildren: '../feedbacks/feedbacks.module#FeedbacksPageModule'
+          }
+        ]
+      },
+      {
         path: 'alerts',
         children: [
           {

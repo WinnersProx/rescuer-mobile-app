@@ -1,0 +1,21 @@
+ion-content{
+	.view-alert{
+		position: relative;
+		padding-top: .4em 0;
+		ion-button.top-right{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		div{
+			padding: .4em 0;
+			.alert-description{
+				font-weight: bold;
+			}
+			&.map-descriptions{
+				background: #bee3f9;
+				height: 280px;
+			}
+		}
+	}
+}

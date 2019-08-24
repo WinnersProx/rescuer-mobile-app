@@ -1,9 +1,8 @@
 {
-  "name": "SmartChat",
+  "name": "Rescuer",
   "integrations": {
     "cordova": {}
   },
   "type": "angular",
-  "id": "3874b382",
-  "proxy": "http://localhost/smartchat_api/"
+  "id": "1935a8b0"
 }

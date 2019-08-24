@@ -5,7 +5,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AuthenticationService } from './services/authentication.service';
 import { Router } from '@angular/router';
 import { Storage } from '@ionic/storage';
-import { DataService } from './services/datas.service'
+import { DataService } from './services/datas.service';
+import { TabsService } from './services/tabs.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -24,7 +25,8 @@ export class AppComponent {
     private store : Storage,
     private menu : MenuController,
     private zone : NgZone,
-    private ___data : DataService
+    private ___data : DataService,
+    private ___tabs : TabsService
   ) {
   
     this.initializeApp();

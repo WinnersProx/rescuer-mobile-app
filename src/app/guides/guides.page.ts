@@ -6,10 +6,8 @@ import { ChatsService } from '../services/chats.service';
 import { ModalController } from '@ionic/angular';
 import { ChatInfosPage } from '../chat-infos/chat-infos.page';
 import { ProfilePage } from '../profile/profile.page';
-import { DataService } from '../services/datas.service'
-interface Chats {
+import { DataService } from '../services/datas.service';
 
-}
 @Component({
   selector: 'app-tab1',
   templateUrl: 'guides.page.html',
@@ -19,6 +17,7 @@ interface Chats {
 export class GuidesPage implements OnInit{
   private chats:any = [];
   private pageTitle:string = 'Guides';
+  private guides:any;
   constructor(
     private http : HttpClient, 
     private route : Router,
@@ -29,7 +28,10 @@ export class GuidesPage implements OnInit{
     
   }
   ngOnInit(){
-    this.chats = Object.values(this.Chats.getAllChats())[0];
+    this.___data.getGuides()
+    .subscribe(datas => {
+      this.guides = datas;
+    });
   }
   ngDoCheck(){
     this.___data.updateTitle(this.pageTitle)
@@ -58,6 +60,9 @@ export class GuidesPage implements OnInit{
       modal.present();
     });
   }
+  viewGuide(index){
+    this.route.navigate(['/view-guide', index]);
+  }
   async toastError(error) {
     const toast = await this.toast.create({
       message: `An error occured : ${error.message}  with status : ${error.status}`,
@@ -70,4 +75,5 @@ export class GuidesPage implements OnInit{
     });
     toast.present();
   }
+
 }

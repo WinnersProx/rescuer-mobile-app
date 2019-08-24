@@ -20,6 +20,9 @@ ion-content{
             text-align: center;
             ion-button{
                 width: 45%;
+                &.customized-btn{
+                    --background:#576481;
+                }
             }
         }
     }

@@ -1,0 +1,34 @@
+<ion-content class="profile-view">
+    <div class="profile-box">
+              <span class="edit" routerLink="/tabs/edit-profile">
+                <ion-icon name="create" color="light"></ion-icon>
+              </span>
+              <ion-icon name="person" color="light" class="user-logo"></ion-icon>
+              <div>
+                Doe John
+              </div>
+              
+            </div>
+            <ion-list>
+              <ion-item>
+                <span class="p-description">First Name :</span> John
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Last Name :</span>  Doe
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Email :</span> doejohn@gmail.com
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Address :</span> Goma, Nord-Kivu
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Phone :</span> +243975358124
+              </ion-item>
+            </ion-list>
+            <div class="logout-option">
+            	<ion-button size="small" color="danger" (click)="logoutUser()">
+            			<ion-icon name="power"></ion-icon> Logout
+        			</ion-button>
+            </div>
+</ion-content>

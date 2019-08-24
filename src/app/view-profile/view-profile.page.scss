@@ -1,0 +1,36 @@
+ion-content{
+	&.profile-view{
+		div.profile-box{
+      position: relative;
+      background : linear-gradient(to right,rgb(116, 203, 255), rgba(178, 227, 255, 0.95),rgb(116, 203, 255));
+      height: 25vh;
+      color: white;
+      text-align: center;
+      padding-top: 40px;
+      ion-icon.user-logo{
+        font-size: 50px;
+      }
+      span.edit{
+        position: absolute;
+        top: .8em;
+        right:.8em;
+        ion-icon{
+          font-size: 1.5em;
+        }
+      }
+    }
+    ion-list{
+      ion-item{
+        font-size: .95rem;
+        span.p-description{
+          font-weight: bold;
+        }
+      }
+    }
+    div.logout-option{
+      text-align: right;
+      padding-right: .4em;
+    }
+	}
+	
+}
