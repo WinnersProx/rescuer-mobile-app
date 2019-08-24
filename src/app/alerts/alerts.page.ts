@@ -1,7 +1,7 @@
 import { Component,OnInit, DoCheck } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { ToastController } from '@ionic/angular';
-import { DataService } from '../services/datas.service'
+import { DataService } from '../services/datas.service';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'alerts.page.html',

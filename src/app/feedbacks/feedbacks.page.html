@@ -1,0 +1,19 @@
+<ion-content padding>
+	<ion-list class="feedbacks" lines="none">
+		<ion-item class="feedback-msg incoming">
+			<span class="user-name">@Winner</span>&nbsp;Hey guys this ain't funny.
+		</ion-item>
+		<ion-item class="feedback-msg outgoing">
+			<span class="user-name">@Doe</span>&nbsp;Indeed it's man!
+		</ion-item>
+	</ion-list>
+</ion-content>
+<ion-footer>
+	<form (submit)="sendFeedback(this)">
+		<ion-input type="text" [(ngModel)]="message" name="message" placeholder="type your feedback here..."></ion-input>
+		<ion-button type="submit">
+			<ion-icon name="ios-send"></ion-icon>
+		</ion-button>
+	</form>
+	
+</ion-footer>

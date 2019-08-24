@@ -1,0 +1,36 @@
+ion-content{
+	ion-list{
+		&.feedbacks{
+			ion-item{
+				&.feedback-msg{
+					--background: rgba(226, 241, 251, .4);
+					margin-bottom: .4rem;
+					&.incoming{
+						border-radius: 1rem 0;
+					}
+					&.outgoing{
+						border-radius: 0 1rem;
+					}
+					span.user-name{
+						color: #47b3f3;
+            font-size: .96rem;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+}
+ion-footer{
+	form{
+		position: relative;
+		height: 45px;
+		ion-button{
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 1500;
+		}
+	}
+
+}

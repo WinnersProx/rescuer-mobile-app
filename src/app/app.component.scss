@@ -16,6 +16,11 @@ ion-header{
         ion-menu-button, ion-title{
             display: inline-block;
         }
+        span.notifications-area{
+          ion-icon{
+            font-size: 1.5rem;
+          }
+        }
     }
 }
 ion-menu{
@@ -23,8 +28,31 @@ ion-menu{
         --min-width:50vh;
         --max-width:50vh;
         .profile-box{
+            position: relative;
             background : linear-gradient(to right,rgb(116, 203, 255), rgba(178, 227, 255, 0.95),rgb(116, 203, 255));
             height: 25vh;
+            color: white;
+            text-align: center;
+            padding-top: 40px;
+            ion-icon.user-logo{
+              font-size: 50px;
+            }
+            span.edit{
+              position: absolute;
+              top: .8em;
+              right:.8em;
+              ion-icon{
+                font-size: 1.5em;
+              }
+            }
+        }
+        ion-list{
+          ion-item{
+            font-size: .95rem;
+            ion-icon{
+              font-size: .94em;
+            }
+          }
         }
     }
 }
@@ -58,6 +86,11 @@ ion-content{
           }
           p{
             font-size: .85em !important;      }
+        }
+      }
+      form{
+        ion-label{
+          font-size: .96rem;
         }
       }
 }

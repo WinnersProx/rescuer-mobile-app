@@ -1,0 +1,311 @@
+[
+	{
+		"emergency_name": "Cardiac arrest",
+		"emergency_type": "Disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "What is a cardiac arrest",
+				"content": "Cardiac arrest is a sudden loss of blood flow resulting from the failure of the heart to effectively pump.",
+				"picture": "../../assets/datas/cardiac/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "How to recognize",
+				"content": "Someone who is suffering from a cardiac arrest will suddenly lose consciousness and will stop breathing or stop breathing normally. ",
+				"picture": "../../assets/datas/cardiac/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Call for Help and practice CPR",
+				"content": "Once you have identified that a person is having a cardiac arrest, call for help, call 912 and start CPR immediately. ",
+				"picture": "../../assets/datas/cardiac/step3.PNG"
+			}
+		],
+		"infos": "do not put your own safety at risk. Be aware of your surroundings and make sure you are in a safe environment before helping another person."
+	},
+	{
+		"emergency_name": "Epilepsy",
+		"emergency_type": "Disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "What is an Epilepsy",
+				"content": "Epilepsy is a central nervous system (neurological) disorder in which brain activity becomes abnormal, causing seizures or periods of unusual behavior, sensations, and sometimes loss of awareness.",
+				"picture": "../../assets/datas/epilepsy/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "How to recognize",
+				"content": "Because epilepsy is caused by abnormal activity in the brain, seizures can affect any process your brain coordinates. Seizure signs and symptoms may include: Temporary confusion; A staring spell; Uncontrollable jerking movements of the arms and legs; Loss of consciousness or awareness; Psychic symptoms such as fear, anxiety or deja vu",
+				"picture": "../../assets/datas/epilepsy/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Practice that recovery position",
+				"content": "Practice the recovery position and time the seizure, be ready to call 912 in case the seizure goes beyond 5 minutes.",
+				"picture": "../../assets/datas/epilepsy/step3.PNG"
+			}
+		],
+		"infos": "do not put your own safety at risk. Be aware of your surroundings and make sure you are in a safe environment before helping another person."
+	},
+	{
+		"emergency_name": "Adult CPR",
+		"emergency_type": "Disease",
+		"steps": [
+			{
+				"step": 1,
+				"title": "Perform initial assessment",
+				"content": "Always perform the initial assessment in the position the victim is found. If victim needs to be turned on his back for CPR, move the neck and body at the same time like rolling a log.",
+				"picture": "../../assets/datas/cpr/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "check for foreign object",
+				"content": "Open the person’s mouth using the “head tilt chin lift” technique and check if there are any foreign objects in mouth or throat and remove them.",
+				"picture": "../../assets/datas/cpr/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Check breathing & call for Help",
+				"content": "Check breathing by placing your face close to the mouth and observing the chest. Look, listen and feel for signs of breathing for up to 10 seconds. If the casualty is not responding (unconscious) and not breathing normally, call for help and start performing CPR",
+				"picture": "../../assets/datas/cpr/step3.PNG"
+			},
+			{
+				"step": 4,
+				"title": "perform external chest compressions",
+				"content": "Perform external chest compressions by placing the heel of one palm at the lower half of the breast bone and keeping fingers off ribs. Cover this hand with the heel of the other hand.",
+				"picture": "../../assets/datas/cpr/step4.1.PNG"
+			},
+			{
+				"step": 5,
+				"title": "perform external chest compressions",
+				"content": " Keep arms straight and push down vertically about 4 to 5 cm and then release. Do not lift hands off the chest between compressions. Complete 30 compressions in 18 seconds.",
+				"picture": "../../assets/datas/cpr/step4.2.PNG"
+			},
+			{
+				"step": 6,
+				"title": "apply mouth to mouth respiration",
+				"content": " After one cycle of compressions tilt head back, pinch nose and give two short breaths of mouth-to-mouth respiration. Complete 5 cycles of this routine (compressions and mouth-to-mouth) within 2 minutes. Check pulse after every 5 cycles.",
+				"picture": "../../assets/datas/cpr/step5.PNG"
+			},
+			{
+				"step": 7,
+				"title": "Avoid any infection",
+				"content": "Cover your mouth with clean cloth/handkerchief to prevent transmitting infections when giving mouth to mouth rescue breathing. Continue CPR till you are completely exhausted, or someone takes over. Stop compressions as soon as pulse returns and check for breathing. If there is no breathing continue mouth-to-mouth respiration until natural breathing is restored.",
+				"picture": "../../assets/datas/cpr/step6.PNG"
+			}
+		],
+		"infos": "Remember to call for help before doing anything"
+	},
+	{
+		"emergency_name": "Recovery position",
+		"emergency_type": "Disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "Take care of their hands",
+				"content": "Move the arm closer to you and use your hand which is closer to their head to hold their other hand and put this onto the side of their cheek to support the head and neck as you turn them.",
+				"picture": "../../assets/datas/epi/step1.png"
+			},
+			{
+				"step": 2,
+				"title": "Rub the patients' hands",
+				"content": "lift up the outside of their knee with your other hand and now use it(knee) as a lever to pull them over",
+				"picture": "../../assets/datas/epi/step2.png"
+			},
+			{
+				"step": 3,
+				"title": "Check breathing",
+				"content": "Keep checking they are breathing by feeling holding the back of your hand in front of their mouth",
+				"picture": "../../assets/datas/epi/step3.png"
+			},
+			{
+				"step": 4,
+				"title": "time the seizure",
+				"content": "make sure you time the seizure and if it goes over 5 minutes, call for help (912)",
+				"picture": "../../assets/datas/epi/step4.png"
+			}
+		],
+		"infos": "stay with the victim till the seizure is totally over or emergencies arrive"
+	},
+	{
+		"emergency_name": "Choking",
+		"emergency_type": "Disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "Watch for signs of choking",
+				"content": "Victim will be probably clasping their necks with their hands.",
+				"picture": "../../assets/datas/chocking/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "Provide help",
+				"content": "If the victim has difficulty breathing or speaking, we should perform the abdominal thrust or a chest thrust for obese people and pregnant women.",
+				"picture": "../../assets/datas/chocking/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Adbominal thrust",
+				"content": "Stand behind the victim and wrap your arms around the waist. Grasp one fist with your other hand. Place the thumb side of the fist in midline, slightly above the nave. Press your into victim's abdomen with quick inward  and upward thrust. Each thrust should be decisive and with the intention of relieving the obstruction.",
+				"picture": "../../assets/datas/chocking/step3.jpg"
+			},
+			{
+				"step": 4,
+				"title": "Chest thrust",
+				"content": "Stand behind victim and place arms under the victim’s armpits and encircle the chest. Grasp one fist with the order hand, placing the thumb side of the fist in the middle of the victim's breastbone. Press with backward thrust.",
+				"picture": "../../assets/datas/chocking/step4.jpg"
+			}
+		],
+		"infos": " If victims are able to speak, breath or cough, they are attempting to expel the foreign object. We should not inter    fere with the process."
+	},
+	{
+		"emergency_name": "Noize bleeding",
+		"emergency_type": "Disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "Sit upright and lean forward",
+				"content": "By remaining upright, you reduce blood pressure in the veins of your nose. This discourages further bleeding. Sitting forward will help you avoid swallowing blood, which can irritate your stomach.",
+				"picture": "../../assets/datas/nosebleeds/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "Pinch your nose",
+				"content": "Use your thumb and index finger to pinch your nostrils shut. Breathe through your mouth. Continue to pinch for 10 to 15 minutes. Pinching sends pressure to the bleeding point on the nasal septum and often stops the flow of blood. If the bleeding continues after 10 to 15 minutes, repeat holding pressure for another 10 to 15 minutes. Avoid peeking at your nose. If the bleeding still continues, seek emergency care.",
+				"picture": "../../assets/datas/nosebleeds/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Refresh",
+				"content": "You can also reduce the blood flow in your nose by decreasing the temperature of your body. For this, you can put ice cubes in your mouth: your temperature will drop quickly! Do not hesitate to suck ice cubes rather than place them on your nose, the operation will be much more effective. Sucking ice cream works just as well as ice cubes ... Strawberry, orange, lemon: every taste is possible!",
+				"picture": "../../assets/datas/nosebleeds/step3.PNG"
+			}
+		],
+		"infos": "Remember to not tilt back to avoid swallowing bloode which can irritate your stomach "
+	},
+	{
+		"emergency_name": "Child and infant CPR",
+		"emergency_type": "disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "Check for alertness",
+				"content": "Shake or tap the child gently. See if the child moves or makes a noise. Shout, 'Are you OK?'.",
+				"picture": "../../assets/datas/child-cpr/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "If there is no response, shout for help",
+				"content": "Tell someone to call 911 and start the CPR. Do not leave the child alone until you have done CPR for about 2 minutes.",
+				"picture": "../../assets/datas/choking/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Perform chest compressions",
+				"content": "Carefully place the child on his or her back; For children, place the heel of one hand on the center of the chest, then place the heel of the other hand on top of the first hand, and lace your fingers together. Deliver 30 quick compressions that are each about 5 cm deep. For infants, use 2 fingers to deliver 30 quick compressions that are each about 3.8 cm deep.",
+				"picture": "../../assets/datas/choking/step3.PNG"
+			},
+			{
+				"step": 4,
+				"title": "Open the airway",
+				"content": "Lift up the chin with one hand. At the same time, tilt the head by pushing down on the forehead with the other hand.",
+				"picture": "../../assets/datas/choking/step4.PNG"
+			},
+			{
+				"step": 5,
+				"title": "Perform two rescue breaths twice",
+				"content": "Cover the child's mouth tightly with your mouth. Pinch the nose closed. Keep the chin lifted and head tilted. Give 2 rescue breaths. Each breath should take about a second and make the chest rise. Then restart the cycle for 2 minutes. If rescues are not yet there then call fr help again and if posible call 912 yourself.",
+				"picture": "../../assets/datas/choking/step4.PNG"
+			}
+		],
+		"infos": " "
+	},
+	{
+		"emergency_name": "Fire Safety",
+		"emergency_type": "disease",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "Prevent fire",
+				"content": "Check electrical wiring in your house. Fix damaged, exposed or loose plugs.",
+				"picture": "../../assets/datas/fire-safety/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "Reduce risk",
+				"content": " If possible, install smoke detectors, test them each month and replace the batteries at least once a year.",
+				"picture": "../../assets/datas/fire-safety/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Instal fire extinguishers",
+				"content": " Have one or more working fire extinguishers in your home, building or school and ensure you know",
+				"picture": "../../assets/datas/fire-safety/step3.PNG"
+			},
+			{
+				"step": 4,
+				"title": "How to instal fire extinguishers",
+				"content": " Install extinguishers about 1 meter high on the wall, near an exit or in easily accessible places and away from heat sources.",
+				"picture": "../../assets/datas/fire-safety/step4.PNG"
+			}
+		],
+		"infos": "Make sure everyone who lives in your house knows about fire safety"
+	},
+	{
+		"emergency_name": "When house on fire",
+		"emergency_type": "emergency",
+		"steps": [ 
+			{
+				"step": 1,
+				"title": "Develop a Space plan",
+				"content": "checking out at least two escape routes and make sure everyone knows what to do.",
+				"picture": "../../assets/datas/during-fire/step1.PNG"
+			},
+			{
+				"step": 2,
+				"title": "GET OUT ",
+				"content": " If the fire start or you hear the smoke alarm for fire alert,go outside right away. Yell to let people know the emergency is real so that they get out too using the escape routes you have planed. Never try to hide from fire. Leave all your things where they are and save yourself first.",
+				"picture": "../../assets/datas/during-fire/step2.PNG"
+			},
+			{
+				"step": 3,
+				"title": "Feeling doors",
+				"content": "Practice feeling all doors before opening them. If the door is hot, get out another way.",
+				"picture": "../../assets/datas/during-fire/step3.PNG"
+			},
+			{
+				"step": 4,
+				"title": "Close doors behind",
+				"content": "Close doors behind but from outside as you escape to delay spread of fire",
+				"picture": "../../assets/datas/during-fire/step4.PNG"
+			},
+			{
+				"step": 5,
+				"title": "Clothes catch on fire",
+				"content": "If your clothes catch on fire, STOP,DROP and ROLL. Stop what you are doing, drop to the ground, cover your face and roll backand forth until the flame go out. Do not run as it will make the fire burn faster.",
+				"picture": "../../assets/datas/during-fire/step5.PNG"
+			},
+			{
+				"step": 6,
+				"title": "Do not call emergency inside a building on fire",
+				"content": "You should not call emergency services from inside the building on fire. Get out first and call from neighbor’s house.",
+				"picture": "../../assets/datas/during-fire/step6.PNG"
+			},
+			{
+				"step": 7,
+				"title": "Fith the fire or not?",
+				"content": "If you have extinguishers at hand,fight the fire only if you can but don’t take undue risk.",
+				"picture": "../../assets/datas/during-fire/step7.PNG"
+			},
+			{
+				"step": 8,
+				"title": "If the fire blocks your escape routes",
+				"content": "If smoke, heat or flames block your exit routes, stay in the room with doors closed. Place a wet towel under the door and call the fire department. Open a window and wave a brightly colored cloth or flashlight to signal for help.",
+				"picture": "../../assets/datas/during-fire/step8.jpg"
+			}
+		],
+		"infos": "Remember that the first thing you should do is to save yourself"
+	}
+]

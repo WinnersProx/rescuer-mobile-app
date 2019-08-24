@@ -1,8 +1,9 @@
 {
-  "name": "Emergencies App",
+  "name": "rescuer-mobile-app",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Winner",
+  "homepage": "https://github.com/WinnersProx/rescuer-mobile-app#readme",
+  "description": "A project For emergencies management connected to the whole African Region",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +12,14 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WinnersProx/rescuer-mobile-app.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WinnersProx/rescuer-mobile-app/issues"
+  },
   "dependencies": {
     "@angular/common": "^7.2.2",
     "@angular/core": "^7.2.2",
@@ -63,8 +71,5 @@
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
   },
-  "devDependencies": {
-    
-  },
-  "description": "A project For emergencies management connected to the whole African Region"
+  "devDependencies": {}
 }
