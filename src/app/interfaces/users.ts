@@ -1,4 +1,5 @@
 export interface Users {
-    authUser : any,
-    __accessToken : string
+  message : string,
+  data    : Object,
+  error   : any
 }

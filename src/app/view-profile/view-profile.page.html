@@ -5,25 +5,25 @@
               </span>
               <ion-icon name="person" color="light" class="user-logo"></ion-icon>
               <div>
-                Doe John
+                {{ authUser.first_name + ' ' + authUser.last_name }}
               </div>
               
             </div>
             <ion-list>
               <ion-item>
-                <span class="p-description">First Name :</span> John
+                <span class="p-description">First Name :</span> {{ authUser.first_name }}
               </ion-item>
               <ion-item>
-                <span class="p-description">Last Name :</span>  Doe
+                <span class="p-description">Last Name :</span>  {{ authUser.last_name }}
               </ion-item>
               <ion-item>
-                <span class="p-description">Email :</span> doejohn@gmail.com
+                <span class="p-description">Email :</span> {{ authUser.email }}
               </ion-item>
               <ion-item>
-                <span class="p-description">Address :</span> Goma, Nord-Kivu
+                <span class="p-description">Address :</span> {{ authUser.address }}
               </ion-item>
               <ion-item>
-                <span class="p-description">Phone :</span> +243975358124
+                <span class="p-description">Phone :</span> {{ authUser.phone }}
               </ion-item>
             </ion-list>
             <div class="logout-option">

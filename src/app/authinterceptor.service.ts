@@ -3,17 +3,19 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse } fr
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AuthenticationService } from './services/authentication.service';
+
 @Injectable({
   providedIn: 'root'
 })
+// platform not ready => it should be || in page ||
 export class AuthInterceptor implements HttpInterceptor {
   constructor(private Auth: AuthenticationService) { }
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    if(!!this.Auth.getToken){
+    if(!!this.Auth.getAuth){
       request = request.clone({
         setHeaders : {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.Auth.getToken}`
+          'Authorization': `Bearer ${this.Auth.getAuth.token}`
         }
       });
     }

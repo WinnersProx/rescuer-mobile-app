@@ -16,6 +16,15 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'view-guide/:guide',
+        children: [
+          {
+            path: '',
+            loadChildren: '../view-guide/view-guide.module#ViewGuidePageModule'
+          }
+        ]
+      },
+      {
         path: 'edit-profile',
         children: [
           {
@@ -61,11 +70,11 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab3',
+        path: 'users',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
+            loadChildren: '../users/users.module#UsersPageModule'
           }
         ]
       },

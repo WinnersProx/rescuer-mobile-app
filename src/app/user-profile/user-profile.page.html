@@ -1,0 +1,34 @@
+<ion-content class="profile-view">
+    <div class="profile-box">
+              <span class="edit" (click)="dismissMe()">
+                <ion-icon name="arrow-back" color="light"></ion-icon>
+              </span>
+              <ion-icon name="person" color="light" class="user-logo"></ion-icon>
+              <div>
+                {{ targetUser.first_name + ' ' + targetUser.last_name }}
+              </div>
+              
+            </div>
+            <ion-list>
+              <ion-item>
+                <span class="p-description">First Name :</span> {{ targetUser.first_name }}
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Last Name :</span>  {{ targetUser.last_name }}
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Email :</span> {{ targetUser.email }}
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Address :</span> {{ targetUser.address }}
+              </ion-item>
+              <ion-item>
+                <span class="p-description">Phone :</span> {{ targetUser.phone }}
+              </ion-item>
+              <ion-item *ngIf="targetUser.role == 3 || targetUser.role == 2" text-end>
+                <ion-icon name="person"></ion-icon> Rescuer
+              </ion-item>
+
+            </ion-list>
+</ion-content>
+

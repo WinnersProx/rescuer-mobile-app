@@ -1,7 +1,7 @@
 <ion-content padding class="guide-steps">
-	<div class="step-title">{{ guide.emergency_name }}</div>
 	<div *ngFor="let step of guide.steps; index as i" class="guide-step">
-		<div class="step-title">Step {{ step.step }} :</div>&nbsp;{{ step.title }}
+		<div class="step-title">Step {{ step.step }} :</div>&nbsp;
+		<strong>{{ step.title }}</strong>
 		<div class="step-image">
 			<img src="{{ step.picture }}">
 		</div>

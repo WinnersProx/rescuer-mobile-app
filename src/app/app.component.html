@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="side">
-      <ion-menu side="start" contentId="side" class="sideMenu" swipeGesture="true" type="overlay" *ngIf="this.auth">
+      <ion-menu side="start" contentId="side" class="sideMenu" swipeGesture="true" type="overlay" *ngIf="this.authUser">
         <ion-content>
             <div class="profile-box">
               <span class="edit" routerLink="/tabs/edit-profile">
@@ -8,31 +8,36 @@
               </span>
               <ion-icon name="person" color="light" class="user-logo"></ion-icon>
               <div>
-                Person name
+                {{ authUser.first_name + ' ' + authUser.last_name }}
               </div>
               
             </div>
             <ion-list>
-              <ion-item routerLink="/tabs/guides">
+              <ion-item routerLink="/tabs/guides" ion-button menuClose>
                 <ion-icon name="home" color="dark"></ion-icon> 
                 <ion-text color="dark">Home</ion-text>
               </ion-item>
-              <ion-item routerLink="/tabs/guides">
+              <ion-item routerLink="/tabs/guides" menuClose>
                   <ion-icon name="albums" color="dark"></ion-icon> 
                   <ion-text color="dark">Guides</ion-text>
-                  <ion-badge slot="end" color="success" mode="ios">100</ion-badge>
+                  <ion-badge slot="end" color="success" mode="ios">10</ion-badge>
               </ion-item>
-              <ion-item routerLink="/tabs/alerts">
+              <ion-item routerLink="/tabs/alerts" menuClose *ngIf="authUser.role === 3">
                   <ion-icon name="locate" color="dark"></ion-icon> 
                   <ion-text color="dark">Alerts Tracker</ion-text>
                   <ion-badge slot="end" color="success" mode="ios">100</ion-badge>
               </ion-item>
-              <ion-item routerLink="/tabs/feedbacks">
+              <ion-item routerLink="/tabs/users" menuClose>
+                  <ion-icon name="locate" color="dark"></ion-icon> 
+                  <ion-text color="dark">Users</ion-text>
+                  <ion-badge slot="end" color="success" mode="ios">20</ion-badge>
+              </ion-item>
+              <ion-item routerLink="/tabs/feedbacks" menuClose>
                   <ion-icon name="chatbubbles" color="dark"></ion-icon> 
                   <ion-text color="dark">FeedBacks</ion-text>
                   <ion-badge slot="end" color="success" mode="ios">100</ion-badge>
               </ion-item>
-              <ion-item>
+              <ion-item menuClose>
                 <ion-icon name="cog" color="dark"></ion-icon> 
                 <ion-text color="dark">Settings</ion-text>
               </ion-item>

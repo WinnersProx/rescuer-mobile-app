@@ -1,24 +1,23 @@
 <ion-content>
-    <ion-list>
-        <ion-item *ngFor="let friend of getFriends; index as i" class="chats" lines="full">
-            <ion-avatar slot="start" (click)="userProfile(chat.user)">
+    <ion-list *ngIf="alerts.length">
+        <ion-item *ngFor="let alert of alerts; index as i" class="chats" lines="full" >
+            <ion-avatar slot="start">
                 <ion-icon name="flame" class="{{i % 2 === 0 ? 'low' : (i % 3 === 0) ? 'medium' : 'high'}}" size="xx-large">
                 </ion-icon>
             </ion-avatar>
-            <ion-label (click)="chatInfos(chat.user)" class="chat">
-                <ion-label class="guide-title">{{
-                    (i % 2) === 0 
-                    ? 'Sickness' : 
-                    (i % 3 === 0) ? 'Accident' : 'Fire Case'
-                }}</ion-label>
-                <p class="text-muted">
-                    <span class="m_content">An emergency case has been pointed out</span>
-                    <i class="date-text">{{ '2019-06-17T02:06:31.796Z' | date }} at {{ '2019-06-17T02:06:31.796Z' | date:'shortTime' }}</i>
-                </p>
-                <ion-button size="small">
-                    <ion-icon name="thumbs-up"></ion-icon> Rescue
-                </ion-button>
+            <ion-label class="guide-title" (click)="viewEmergency(alert)">{{
+                (alert.type === 4) 
+                ? 'Unkown' : 
+                alert.type_name + ' Emergency'
+            }}
+            <p class="text-muted">
+                <i class="date-text">{{ alert.created_on | date }}</i>
+            </p>
             </ion-label>
+            
+            <ion-button size="small" class="btn-section" (click)="approveEmergency(alert.id)" *ngIf="alert.status === 0">
+                <ion-icon name="thumbs-up"></ion-icon> Rescue
+            </ion-button>
         </ion-item>
     </ion-list>
     

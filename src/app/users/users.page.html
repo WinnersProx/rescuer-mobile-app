@@ -1,0 +1,32 @@
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let user of getUsers; index as i" class="chats" lines="full">
+            <ion-avatar slot="start">
+                <ion-icon name="ios-person" class="{{i % 2 === 0 ? 'low' : (i % 3 === 0) ? 'medium' : 'high'}}" size="xx-large">
+                </ion-icon>
+            </ion-avatar>
+            <ion-label (click)="viewUserProfile(user)" class="chat">
+                <ion-label class="guide-title">
+                    {{ user.first_name + ' ' + user.last_name }}
+                </ion-label>
+            </ion-label>
+
+            <ion-button color="primary" size="small" (click)="alterRole(2,user.id)" *ngIf="user.role === 1 && authUser.role === 3" class="alter-role">
+            	<ion-icon name="checkmark-circle-outline"></ion-icon> Set admin
+          	</ion-button>
+            <ion-button color="primary" size="small" (click)="alterRole(3,user.id)" *ngIf="user.role === 2 && authUser.role === 3" class="alter-role">
+            	<ion-icon name="checkmark-circle-outline"></ion-icon> Set super admin
+            </ion-button>
+            <ion-text color="primary" *ngIf="user.role === 3" class="role-text">
+            	<ion-icon name="person"></ion-icon> Super Admin
+            </ion-text>
+            <ion-text color="primary" *ngIf="user.role === 1 && authUser.role !== 3" class="role-text">
+            	<ion-icon name="person"></ion-icon> Standard
+            </ion-text>
+            <ion-text color="primary" *ngIf="user.role === 2 && authUser.role !== 3" class="role-text">
+            	<ion-icon name="person"></ion-icon> Rescuer
+            </ion-text>
+        </ion-item>
+    </ion-list>
+    
+</ion-content>

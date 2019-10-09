@@ -2,10 +2,7 @@ import { Component,OnInit, DoCheck } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
-import { ChatsService } from '../services/chats.service';
 import { ModalController } from '@ionic/angular';
-import { ChatInfosPage } from '../chat-infos/chat-infos.page';
-import { ProfilePage } from '../profile/profile.page';
 import { DataService } from '../services/datas.service';
 
 @Component({
@@ -15,7 +12,6 @@ import { DataService } from '../services/datas.service';
 })
     
 export class GuidesPage implements OnInit{
-  private chats:any = [];
   private pageTitle:string = 'Guides';
   private guides:any;
   constructor(
@@ -23,8 +19,7 @@ export class GuidesPage implements OnInit{
     private route : Router,
     private toast : ToastController,
     private modal : ModalController,
-    private ___data  : DataService,
-    private Chats : ChatsService){
+    private ___data  : DataService){
     
   }
   ngOnInit(){
@@ -36,30 +31,7 @@ export class GuidesPage implements OnInit{
   ngDoCheck(){
     this.___data.updateTitle(this.pageTitle)
   }
-  async chatInfos(info){
-    // create a modal for data sharing instead of routing to another page
-    await this.modal.create({
-      component : ChatInfosPage,
-      componentProps : {
-        chatInfos : info
-      }
-    })
-    .then(modal => {
-      modal.present()
-    });
-    //this.route.navigate(['chat', info.user.id]);
-  }
-  async userProfile(user){
-    await this.modal.create({
-      component : ProfilePage,
-      componentProps : {
-        targetUser : user
-      }
-    })
-    .then(modal => {
-      modal.present();
-    });
-  }
+  
   viewGuide(index){
     this.route.navigate(['/view-guide', index]);
   }

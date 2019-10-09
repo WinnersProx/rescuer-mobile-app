@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Platform, LoadingController } from '@ionic/angular';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Users } from '../interfaces/users';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
-let base_url = 'http://localhost/smartchat_api/users/';
 
 @Injectable({
   providedIn: 'root'
@@ -17,89 +16,69 @@ export class AuthenticationService {
   private authenticationState = new BehaviorSubject(false);
   public accessToken = null;
   private authUser = null;
- 
+  private baseUrl:string = 'http://localhost:3000/api/v1/';
+  private httpOptions = {
+    headears : new HttpHeaders({
+      'Content-Type' : 'application/x-www-form-urlencoded'
+    })
+  };
   constructor(private platform : Platform, 
     private http : HttpClient, 
     private store : Storage, 
-    private route : Router,
-    private toast : ToastController) { 
-    
+    private route : Router) {
+    this.platform.ready().then(() => {
+      this.initAuth();
+    })
+  }
+  initAuth(){
+    this.authUser = this.store.get('auth').then(authUser => {
+      this.authUser = authUser;
+      return authUser;
+    });
   }
   errorHandler(error : HttpErrorResponse){
     console.log(error);
   }
-  logIn(user){
-    let datas = {
-      __accessToken : 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9',
-      authUser      :
-        {
-          "id": 2,
-          "email": "bihames4vainqueur@gmail.com",
-          "created": "2018-03-07T09:55:57+00:00",
-          "modified": "2018-03-13T00:17:47+00:00",
-          "about": "nothing special!",
-          "phone": "+243991264608",
-          "avatar": "avatars\/2\/4a6f111232de9b99f69fbb8d8ab45b75.jpg",
-          "name": "arsene",
-          "slug": "arsene",
-          "user_dob": null,
-          "user_sex": ""
-        }
-    };
-    this.store.set('__accessToken', datas.__accessToken)
-    this.store.set('authUser', datas.authUser);
-    this.setToken(datas.__accessToken);
-    this.setAuthUser(datas.authUser);
-    this.route.navigate(['tabs']);
-
+  logIn({email, password}){
+    return this.http.post(`${this.baseUrl}auth/signin`, {email, password})
+  }
+  signUpUser({ first_name, last_name, email, address, phone, password }){
+    return this.http.post(`${this.baseUrl}auth/signup`, { first_name, last_name, email, 
+      address, phone, password 
+    })
   }
   
   isAuthenticated(){
     return this.authenticationState.value;
   }
-  setToken(token){
-    this.accessToken = token;
-  }
   
-  get getToken(){
-    return this.accessToken;
+  getAuthUser(){
+    return this.store.get('auth').then(auth => auth)
   }
-  get getAuthUser(){
-    return this.authUser;
+  get getToken(){
+    return this.store.get('auth').then(auth => {
+      return auth ? auth.token : false;
+    });
   }
   checkToken(){
-    this.store.get('__accessToken').then(authToken => {
+    this.store.get('auth').then(auth => {
       this.authenticationState.next(true);
-      this.accessToken = authToken
+      this.accessToken = auth.token;
     }, error =>{
       this.authenticationState.next(false);
     });
     return this.authenticationState.value;
-    
   }
   setAuthUser(user){
+    this.store.set('auth', user);
     this.authUser = user;
   }
   logoutUser(){
-      this.store.remove('__accessToken').then(() => {
-        this.store.remove('authUser').then(() => {
-          this.setToken(null);
-          this.setAuthUser(null);
-          this.route.navigate(['login']);
-        })
-      });
-  }
-  async toastError(error) {
-    let status = error.status ? error.status :  "no status";
-    const toast = await this.toast.create({
-      message: `An error occured : ${error.message}  with status : ${status}`,
-      showCloseButton: true,
-      duration : 10000,
-      animated : true,
-      color : 'danger',
-      position: 'bottom',
-      closeButtonText: 'OK'
+    this.store.remove('auth').then(() => {
+      this.setAuthUser(null);
     });
-    toast.present();
+  }
+  get getAuth(){
+    return this.authUser;
   }
 }

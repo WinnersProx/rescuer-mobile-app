@@ -1,22 +1,45 @@
+<ion-header mode="ios">
+  <ion-toolbar>
+  		<span class="edit" (click)="dismissMe()">
+        <ion-icon name="arrow-back" color="light"></ion-icon>
+      </span>
+      <ion-title>Emergency details</ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content padding>
 	<div class="view-alert">
-		<ion-button size="small" class="top-right">
-			<ion-icon name="thumbs-up"></ion-icon> Rescue
-		</ion-button>
 		<div>
-			<span class="alert-description"> User in need :</span> Doe
+			<span class="alert-description"> First Name :</span> {{ emergencyDetails.first_name}}
 		</div>
 		<div>
-			<span class="alert-description"> Location :</span> Goma, Kivu-Lake
+			<span class="alert-description"> Last Name :</span> {{ emergencyDetails.last_name }}
 		</div>
 		<div>
-			<span class="alert-description"> Time :</span> 07:30AM
+			<span class="alert-description"> Address :</span> {{ emergencyDetails.address }}
 		</div>
 		<div>
-			<span> On map </span>
+			<span class="alert-description"> Date :</span> {{ emergencyDetails.created_on | date }}
 		</div>
-		<div class="map-descriptions">
+		<div class="map-descriptions" id="map">
 			
+		</div>
+		<div>
+			<ion-button size="small" expand="block" *ngIf="emergencyDetails.status === 0" (click)="approveEmergency(emergencyDetails.id)">
+				<ion-icon name="thumbs-up"></ion-icon> Rescue
+			</ion-button>
+			<ion-button size="small" color="danger" expand="block" *ngIf="emergencyDetails.status === 0" (click)="disApproveEmergency(emergencyDetails.id)">
+				<ion-icon name="thumbs-down"></ion-icon> Disapprove
+			</ion-button>
+			<span *ngIf="emergencyDetails.status === 1">
+				<strong>Status : </strong> <ion-text color="success">approved</ion-text>
+			</span>
+			<span *ngIf="emergencyDetails.status === 2">
+				<strong>Status : </strong> <ion-text color="success">disapproved</ion-text>
+			</span>
+		</div>
+		<div class="coords">
+			<ion-label><b>Latitude : </b> {{ latitude }}</ion-label><br>
+			<ion-label><b>Longitude : </b> {{ longitude }}</ion-label>
 		</div>
 	</div>
 </ion-content>

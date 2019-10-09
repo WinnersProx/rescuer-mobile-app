@@ -1,0 +1,76 @@
+.welcome-card ion-img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+ion-content{
+  .text-bold{
+    font-family: inherit;
+  }
+  .role-text{
+    font-size: 12px;
+    ion-icon{
+      --padding: 0 !important;
+      padding: 0 !important;
+    }
+  }
+  .alter-role{
+    text-transform: capitalize;
+    ion-icon{
+      padding: 0 !important;
+      --padding: 0 !important;
+    }
+  }
+  .text-muted{
+    font-weight: normal;
+    font-style: unset;
+    font-family: unset;
+    color:gray;
+    .m_content{
+      font-size: 1.1em;
+    }
+  }
+  i.text-muted{
+    float: right;
+    line-height: initial;
+    font-size: .9em;
+  }
+  .chats{
+    &:nth-child(odd){
+  
+      .chat-nbr{
+        color: white;
+        background: #7044ff;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+        border-radius: 50%;
+        float: right;
+       }
+    }
+    &:nth-child(even){
+      .chat-nbr{
+         display: none;
+     }
+    }
+  }
+  // rescuer App
+  
+}
+ion-fabs{
+  padding-top: 7vh;
+  ion-fab-button{
+      ion-icon{
+          &.toggle-icon{
+              color: #ffff;
+              background:red;
+              padding: 7px;
+              border-radius: 50%;
+              border: 3px solid #d2a3a3;
+          }
+      }
+  }
+}
+
+

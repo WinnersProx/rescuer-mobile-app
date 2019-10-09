@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GuidesPage } from './guides.page';
-import { ChatInfosPage } from '../chat-infos/chat-infos.page';
-import { ProfilePage } from '../profile/profile.page';
 @NgModule({
   imports: [
     IonicModule,
@@ -13,8 +11,8 @@ import { ProfilePage } from '../profile/profile.page';
     FormsModule,
     RouterModule.forChild([{ path: '', component: GuidesPage }])
   ],
-  declarations: [GuidesPage, ChatInfosPage,ProfilePage],
-  entryComponents : [ChatInfosPage,ProfilePage]
+  declarations: [GuidesPage],
+  entryComponents : []
 
 })
 export class GuidesPageModule {}

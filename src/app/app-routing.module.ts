@@ -8,16 +8,14 @@ const routes: Routes = [
   },
   {
     path: 'tabs', 
-    loadChildren: './tabs/tabs.module#TabsPageModule'
+    loadChildren: './tabs/tabs.module#TabsPageModule',
+    canActivate : [AuthGuardService]
   },
   { 
     path: 'home', 
     loadChildren: './home/home.module#HomePageModule'
   },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'chat-infos', loadChildren: './chat-infos/chat-infos.module#ChatInfosPageModule' },
-  { path: 'chat/:userId', loadChildren: './chat-infos/chat-infos.module#ChatInfosPageModule' },
-  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' },
   { path: 'new-alert', loadChildren: './new-alert/new-alert.module#NewAlertPageModule' },
   { path: 'signup', loadChildren: './signup/signup.module#SignupPageModule' },
   { path: 'edit-profile', loadChildren: './edit-profile/edit-profile.module#EditProfilePageModule' },
@@ -25,7 +23,9 @@ const routes: Routes = [
   { path: 'feedbacks', loadChildren: './feedbacks/feedbacks.module#FeedbacksPageModule' },
   { path: 'view-profile', loadChildren: './view-profile/view-profile.module#ViewProfilePageModule' },
   { path: 'view-guide/:guide', loadChildren: './view-guide/view-guide.module#ViewGuidePageModule' },
-  { path: 'view-alert', loadChildren: './view-alert/view-alert.module#ViewAlertPageModule' },
+  { path: 'view-alert', loadChildren: './view-alert/view-alert.module#ViewAlertPageModule' },  { path: 'users', loadChildren: './users/users.module#UsersPageModule' },
+  { path: 'user-profile', loadChildren: './user-profile/user-profile.module#UserProfilePageModule' },
+
 
   
 ]; 

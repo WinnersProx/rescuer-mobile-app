@@ -11,6 +11,9 @@
       font-style: unset;
       font-family: unset;
       color:gray;
+      &.btn-section{
+        padding-top: 1em;
+      }
       .m_content{
         font-size: 1.1em;
       }
@@ -39,6 +42,11 @@
         .chat-nbr{
            display: none;
        }
+      }
+      ion-button{
+        .btn-section{
+          margin-top: .8em;
+        }
       }
       ion-label{
         ion-button{

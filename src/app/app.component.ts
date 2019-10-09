@@ -30,19 +30,6 @@ export class AppComponent {
   ) {
   
     this.initializeApp();
-    this.auth = {
-      "id": 2,
-      "email": "bihames4vainqueur@gmail.com",
-      "created": "2018-03-07T09:55:57+00:00",
-      "modified": "2018-03-13T00:17:47+00:00",
-      "about": "nothing special!",
-      "phone": "+243991264608",
-      "avatar": "avatars\/2\/4a6f111232de9b99f69fbb8d8ab45b75.jpg",
-      "name": "arsene",
-      "slug": "arsene",
-      "user_dob": null,
-      "user_sex": ""
-    }
     this.___data.currentTitle.subscribe(title => {
       this.pageTitle = title
     })
@@ -52,21 +39,16 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      //set the token
-      this.store.get('__accessToken').then(AuthToken => {
-        this.Auth.setToken(AuthToken);
-      })
-      this.store.get('authUser').then(user => {
-          this.Auth.setAuthUser(user);
-      })
+
+      this.auth = this.Auth.getAuthUser().then(authUser => {
+        this.auth = authUser;
+        return authUser;
+      });
     });
 
   }
-  get AuthUser(){
+  get authUser(){
     return this.auth;
-  }
-  setAuthUser(user){
-    this.auth = user;
   }
   openMenu(){
     this.menu.enable(true, 'side');

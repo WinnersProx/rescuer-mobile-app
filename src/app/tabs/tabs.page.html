@@ -5,13 +5,13 @@
       <ion-label>Guide</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="alerts" color="light">
+    <ion-tab-button tab="alerts" color="light" *ngIf="authUser.role === 3">
       <ion-icon name="ios-megaphone"></ion-icon>
       <ion-label>Alerts</ion-label>
     </ion-tab-button>
 
     <ion-tab-button  class="toggle-alert" (click) = "newEmergencyAlert()">
-      <ion-icon name="ios-rocket" color="danger" size="large" sr="icon-only" class="toggle-icon"></ion-icon>
+      <ion-icon name="notifications" color="danger" size="large" sr="icon-only" class="toggle-icon"></ion-icon>
     </ion-tab-button>
 
     <ion-tab-button tab="feedbacks" color="light">

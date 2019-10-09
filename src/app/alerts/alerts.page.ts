@@ -1,40 +1,56 @@
 import { Component,OnInit, DoCheck } from '@angular/core';
-import { UsersService } from '../services/users.service';
 import { ToastController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular'
 import { DataService } from '../services/datas.service';
+import { AlertsService } from '../services/alerts.service';
+import { Users } from '../interfaces/users';
+import { ViewAlertPage } from '../view-alert/view-alert.page';
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'alerts.page.html',
   styleUrls: ['../app.component.scss','alerts.page.scss']
 })
 export class AlertsPage implements OnInit{
-  private friends:any[];
+  private alerts:any[] = [];
   private pageTitle:string = 'Alerts'
-  constructor(
-    private Users : UsersService, 
+  constructor( 
     private toast : ToastController,
-    private ___data  : DataService){
+    private ___data  : DataService,
+    private ___alerts : AlertsService,
+    private modalController : ModalController){
   }
   ngOnInit(){
-    
-    this.friends = Object.values(this.Users.getUserFriends())[0];
+    this.___alerts.viewAlerts().subscribe(res => {
+      this.alerts = Object.values(res)[1];
+    }, (error:Users) => {
+      this.___data.toastError(error);
+    });
   }
   ngDoCheck(){
     this.___data.updateTitle(this.pageTitle)
   }
-  get getFriends(){
-    return this.friends;
+  
+  async viewEmergency(emergency){
+    return await this.modalController.create({
+      component : ViewAlertPage,
+      componentProps : { emergency },
+      backdropDismiss : true,
+      showBackdrop : true,
+      cssClass  : 'view-alert-page',
+      animated  : true,
+      mode      : 'ios'
+    }).then(modal => {
+      modal.present()
+    })
   }
-  async toastMessage(message, type = ''){
-    const toast = await this.toast.create({
-      message: `An error occured : ${type === 'error' ? message.message + ', status ' + message.status : message }`,
-      showCloseButton: true,
-      duration : 2000,
-      animated : true,
-      color : type === 'error' ? 'danger' : 'secondary',
-      position: 'bottom',
-      closeButtonText: 'OK'
-    });
-    toast.present();
+  approveEmergency(emergency){
+    this.___alerts.approveEAllert(emergency).subscribe((res:Users) => {
+      this.___data.successToast(res.message);
+    }, (error:Users) => {
+      this.___data.toastError(error);
+    })
+    
   }
+
 }

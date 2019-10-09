@@ -1,16 +1,18 @@
 <ion-content padding>
-	<ion-list class="feedbacks" lines="none">
-		<ion-item class="feedback-msg incoming">
-			<span class="user-name">@Winner</span>&nbsp;Hey guys this ain't funny.
+	<ion-list class="feedbacks" lines="none" #feedbacks>
+		<ion-item class="feedback-msg incoming" *ngFor="let feedback of ufeedbacks; index as i">
+			<span class="user-name" (click)="viewUserProfile(feedback.user_id)">@{{ feedback.first_name }}</span>&nbsp;{{ feedback.message }} 
+			<ion-text class="created">{{ feedback.created_on | date }}</ion-text>
 		</ion-item>
+		<!-- 
 		<ion-item class="feedback-msg outgoing">
 			<span class="user-name">@Doe</span>&nbsp;Indeed it's man!
-		</ion-item>
+		</ion-item> -->
 	</ion-list>
 </ion-content>
 <ion-footer>
 	<form (submit)="sendFeedback(this)">
-		<ion-input type="text" [(ngModel)]="message" name="message" placeholder="type your feedback here..."></ion-input>
+		<ion-input type="text" [(ngModel)]="message" name="message" placeholder="type your feedback here..." class="message-input" #msgInput></ion-input>
 		<ion-button type="submit">
 			<ion-icon name="ios-send"></ion-icon>
 		</ion-button>

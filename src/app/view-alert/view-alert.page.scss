@@ -1,10 +1,34 @@
+ion-header{
+    height: 10vh;
+    ion-toolbar{
+        --border-color: transparent !important;
+        --border-width: 0 0 0 0 !important;
+        --background : #74cbff;
+        ion-title{
+            width: 75%;
+            display: inline-block;
+            text-align: center;
+            font-weight: 500;
+            color : #ffffff;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    
+        }
+        span.edit{
+            top: .8em;
+            left:.8em;
+            ion-icon{
+              font-size: 1.5em;
+            }
+      }
+    }
+}
 ion-content{
 	.view-alert{
 		position: relative;
 		padding-top: .4em 0;
-		ion-button.top-right{
+		div.top-right{
 			position: absolute;
-			top: 0;
+			bottom: -65px;
 			right: 0;
 		}
 		div{

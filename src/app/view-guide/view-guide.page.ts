@@ -23,8 +23,8 @@ export class ViewGuidePage implements OnInit {
     });
   }
   ngDoCheck(){
-    this.pageTitle = this.currentIndex < 10 ? `Guide#00${this.currentIndex + 1}` : `Guide#0${this.currentIndex + 1}`;
-  	this.__data.updateTitle(this.pageTitle);
+    this.pageTitle = `Guide-${this.currentIndex + 1}`;
+  	this.__data.updateTitle(this.guide.emergency_name);
   }
 
 }

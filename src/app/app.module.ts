@@ -9,10 +9,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { IonicStorageModule } from '@ionic/storage';
 import { AuthInterceptor } from './authinterceptor.service';
+import { IonicStorageModule } from '@ionic/storage';
 import { AuthenticationService } from './services/authentication.service';
 import { AuthGuardService } from './services/auth-guard.service';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 // import { SuperTabsModule } from 'ionic2-super-tabs';
 import { TabsService } from './services/tabs.service';
 @NgModule({
@@ -23,7 +24,6 @@ import { TabsService } from './services/tabs.service';
     AppRoutingModule,
     HttpClientModule, 
     IonicStorageModule.forRoot()
-    // SuperTabsModule.forRoot()
   ],
   providers: [
     StatusBar,
@@ -31,7 +31,8 @@ import { TabsService } from './services/tabs.service';
     AuthenticationService,
     AuthGuardService,
     TabsService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
+    Geolocation,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide  : HTTP_INTERCEPTORS,
       useClass : AuthInterceptor,

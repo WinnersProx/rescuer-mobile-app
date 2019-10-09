@@ -5,6 +5,7 @@ ion-content{
 				&.feedback-msg{
 					--background: rgba(226, 241, 251, .4);
 					margin-bottom: .4rem;
+					font-size: .95em;
 					&.incoming{
 						border-radius: 1rem 0;
 					}
@@ -15,6 +16,13 @@ ion-content{
 						color: #47b3f3;
             font-size: .96rem;
 						font-weight: bold;
+					}
+					ion-text.created{
+						position: absolute;
+				    right: 7px;
+				    bottom: 5px;
+				    color: #807676;
+				    font-size: 14px;
 					}
 				}
 			}
